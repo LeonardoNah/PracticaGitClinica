@@ -1,0 +1,17 @@
+<!-- Se hereda la estructura html de base.html -->
+{% extends 'core/base.html' %}
+{% load static %}
+{% block css_externo %} 
+<link rel="stylesheet" href="{% static 'core/css/alta_medico.css' %}">
+{% endblock %}
+
+<!-- Etiqueta tags para completar con lo que corresponde cada pagina -->
+{% block title %}Carga {% endblock %}
+{% block section_title %} Carga de Medicos {% endblock %}
+
+{% block main %}
+    <h3>Nombre Medico:{{nombre_medico}}</h3>
+    <p>Hora de ingreso: {{hora}}</p>
+    <p>Especialidad : {{especialidad}}</p>
+
+{%  endblock %}
